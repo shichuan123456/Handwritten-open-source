@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="./index.js"></script>
+  <script>
+    /**********************************************************************/
+    //实例
+    var getData100 = function () {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve('100ms');
+        }, 1000);
+      });
+    }
+
+    var getData200 = function () {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve('200ms');
+        }, 2000);
+      });
+    }
+    var getData300 = function () {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          reject('reject');
+        }, 300);
+      });
+    }
+
+   /* getData100().then(function (data) {
+      console.log(data); // 100ms
+      return getData200();
+    }).then(function (data) {
+      console.log(data); // 200ms
+      return getData300();
+    }).then(function (data) {
+      console.log(data); // 100ms
+    }, function (data) {
+      console.log(data);
+    }); */
+    Promise.race([getData100(), getData300()]).then(data => {
+      console.log(data)
+    }, (reason) => {
+      console.log(reason)
+    })
+
+  </script>
+</body>
+
+</html>

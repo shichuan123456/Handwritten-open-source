@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>z手写vue源码</title>
+</head>
+
+<body>
+  <div id="app" class="body">
+    <div class="b_header">
+      <img class="b_img" src="https://cn.vuejs.org/images/logo.png" /><span>z手写vue源码</span>
+    </div>
+    <div class="b_content">
+      <div class="n_name">姓名：{{name}}</div>
+      <div class="box">
+        <span>年龄：{{age}}</span>
+      </div>
+      <div>{{content}}</div>
+      <div>
+        <input type="text" z-model="content" placeholder="请输入自我介绍" />
+      </div>
+      <div z-html="htmlSpan"></div>
+      <button @click="changeName">点击提示</button>
+    </div>
+  </div>
+  <style>
+    .body {
+      text-align: left;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    .body .b_header {
+      display: flex;
+      justify-item: center;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 20px;
+    }
+
+    .body .b_header span {
+      font-size: 21px;
+    }
+
+    .body .b_img {
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      align-item: center;
+    }
+
+    .body .b_content {}
+
+    .body div {
+      margin-top: 10px;
+      min-height: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  </style>
+  <script src="./Vue.js"></script>
+  <script>
+    const w = new zVue({
+      el: '#app',
+      data: {
+        "name": "加载中...",
+        "age": '加载中...',
+        "content": "我是一枚优秀的程序员",
+        "htmlSpan": '<a href="http://wwww.zhuangweizhan.cn">点击欢迎进入个人主页 </a>',
+        "forList": [
+          "勤奋好学",
+          "努力上进"
+        ]
+      },
+      created() {
+        setTimeout(() => {
+          this.age = "25岁";
+          this.name = "weizhan";
+        }, 800);
+      },
+      methods: {
+        changeName() {
+          alert("欢迎进入个人主页: http://www.zhuangweizhan.cn");
+        }
+      }
+    })
+  </script>
+
+  <div
+    style="position: fixed;bottom: 0;text-align: center;width: 100%;padding: 25px 0;background-color: #bfd6e8;color: #843838;font-size:18px;">
+    <div style="font-size:20px;margin-bottom:20px;">欢迎访问主页</div>
+    <div>个人github：
+      <a style="color:#843838;" target="_blank"
+        href="https://github.com/zhuangweizhan">https://github.com/zhuangweizhan</a>
+    </div>
+    <div>个人掘金：
+      <a style="color:#843838;" target="_blank"
+        href="https://juejin.im/user/5e8fddc9e51d4546be39a558">https://juejin.im/user/5e8fddc9e51d4546be39a558</a>
+    </div>
+    <div>本源码博客解说：
+      <a style="color:#843838;" target="_blank" href="https://juejin.im/post/5f0326786fb9a07e976bd945">
+        https://juejin.im/post/5f0326786fb9a07e976bd945</a>
+    </div>
+  </div>
+</body>
+
+</html>
