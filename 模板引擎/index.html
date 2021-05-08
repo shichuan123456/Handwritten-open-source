@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <div id="container"></div>
+  <script type="text/html" id="template">
+    <div>
+      My name is {{name}} and love
+      <ul>
+        {{ #sports }}
+        <li>{{name}}</li>
+        {{ #/ }}
+      </ul>
+      , {{age}} years old , and Engaged in computer work has been {{ years }} years.
+    </div>
+  </script>
+  <script type="module">
+    import Render from "./index.js";
+    const container = document.getElementById("container");
+    const template = document.getElementById("template").innerHTML;
+    const data = {
+      name: "robert",
+      sports: [{
+        name: "basketball"
+      }, {
+        name: "footbal"
+      }, {
+        name: "pingpang"
+      }, {
+        name: "tennis"
+      }],
+      age: "18",
+      years: "6",
+
+    }
+
+    const r = new Render(template, data);
+    container.innerHTML = r.render();
+  </script>
+
+
+</body>
+
+</html>

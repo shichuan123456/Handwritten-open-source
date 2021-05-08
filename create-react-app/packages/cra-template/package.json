@@ -1,0 +1,26 @@
+{
+  "name": "cra-template",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "labo <labo@asiainfo.com>",
+  "homepage": "https://github.com/shichuan123456/Handwritten-open-source#readme",
+  "license": "ISC",
+  "main": "lib/cra-template.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shichuan123456/Handwritten-open-source.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/shichuan123456/Handwritten-open-source/issues"
+  }
+}

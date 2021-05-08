@@ -1,15 +1,15 @@
 // const express = require('express')
 
-// const app = express();
-// const PORT = 7000;
+const app = express();
+const PORT = 7000;
 
-// app.get("/", function(req, res) {
-//   res.end("123")
-// })
+app.get("/", function(req, res) {
+  res.end("123")
+})
 
-// app.listen(PORT, () => {
-//   console.log("server is started!!!");
-// })
+app.listen(PORT, () => {
+  console.log("server is started!!!");
+})
 
 
 

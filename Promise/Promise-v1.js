@@ -155,7 +155,7 @@
       throw new TypeError('promises must be an array')
     }
 
-    return Promise(function(resolve, reject) {
+    return new Promise(function(resolve, reject) {
       for(let i =0, len =  promises.length; i < len; i++) {
         promises[i].then(resolve, reject);
       }

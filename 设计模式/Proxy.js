@@ -1,9 +1,9 @@
-// v1
+// v1 用代理模式实现 loading
 const createImg = (function () {
   const imgNode = document.createElement("img");
   document.body.appendChild(imgNode);
   return {
-    setSrc: function (src) {
+    setSrc: function (src) {                                                                                                                 
       imgNode.src = src;
     },
   };

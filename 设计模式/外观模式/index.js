@@ -22,7 +22,7 @@
 //   this.bindEvent();
 // }
 
-
+// 外观模式
 function addEvent(dom, type, fn) {
   if(dom.addEventListener) {
     addEvent = dom.addEventListener(type, fn, false);
@@ -34,6 +34,7 @@ function addEvent(dom, type, fn) {
     }
   }
   addEvent(dom, type, fn);
-}
+} 
+
 
 

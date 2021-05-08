@@ -1,0 +1,27 @@
+{
+  "name": "Handwritten-open-source",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shichuan123456/Handwritten-open-source.git"
+  },
+  "keywords": [],
+  "author": "robert <labo> (dfsf)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shichuan123456/Handwritten-open-source/issues"
+  },
+  "homepage": "https://github.com/shichuan123456/Handwritten-open-source#readme"
+}
